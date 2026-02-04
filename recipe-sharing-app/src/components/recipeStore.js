@@ -58,7 +58,7 @@ const useRecipeStore = create(set => ({
     return favorites.some((fav) => fav.id === id);
   },
 
-  recommendedRecipes: () => {
+  recommendations: () => {
     const { recipes, favorites } = get();
 
     if (favorites.length === 0) return [];

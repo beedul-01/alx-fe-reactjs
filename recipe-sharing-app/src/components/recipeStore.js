@@ -16,6 +16,18 @@ const useRecipeStore = create(set => ({
       recipes: state.recipes.filter((recipe) => recipe.id !== id),
     })),
 
+   setSearchTerm: (term) =>
+    set({ searchTerm: term }),
+
+  filteredRecipes: () => {
+    const { recipes, searchTerm } = get();
+    return recipes.filter((recipe) =>
+      recipe.title
+        .toLowerCase()
+        .includes(searchTerm.toLowerCase())
+    );
+  },
+
 }));
 
 export default useRecipeStore;

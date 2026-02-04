@@ -1,26 +1,16 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
-import WelcomeMessage from './components/WelcomeMessage.jsx'
-import MainContent from './components/MainContent.jsx'
-import Footer from './components/Footer.jsx'
-import Header from './components/Header.jsx'
-import UserProfile from './components/UserProfile.jsx'
-function App() {
-  const [count, setCount] = useState(0)
+import ProfilePage from './ProfilePage';
+import UserContext from './UserContext . js';
 
-  return (
-    <>
-      
-        <WelcomeMessage />
-        <Header />
-        <MainContent />
-         <UserProfile name="Alice" age="25" bio="Loves hiking and photography" />
-        <Footer />
-        
-    </>
-  )
+function App() {
+  const userData = { name: "Jane Doe", email: "jane.doe@example.com" };
+
+  return(
+    <UserContext.Provider value={userData}>
+    <ProfilePage />
+    </UserContext.Provider>
+  ); 
 }
 
-export default App
+export default App;

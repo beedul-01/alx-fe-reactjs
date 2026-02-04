@@ -4,6 +4,8 @@ import './App.css'
 import RecipeList from './components/RecipeList'
 import AddRecipeForm from './components/AddRecipeForm'
 import SearchBar from './components/SearchBar';
+import FavoritesList from './components/FavouritesList';
+import RecommendationsList from './components/RecommendationsList';
 function App(){
     return (
       
@@ -17,6 +19,8 @@ function App(){
       <SearchBar />
       <RecipeList />
       <AddRecipeForm />
+      <FavoritesList />
+      <RecommendationsList />
       </div>
     )
 } 

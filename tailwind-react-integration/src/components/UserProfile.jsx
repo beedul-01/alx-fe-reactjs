@@ -7,7 +7,7 @@ function UserProfile() {
         rounded-lg
         shadow-lg
         text-center
-        p-4 md:p-8
+        sm:p-4 md:p-8
         max-w-xs md:max-w-sm
       "
     >

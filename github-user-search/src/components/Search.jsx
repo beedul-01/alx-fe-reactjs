@@ -16,10 +16,10 @@ const Search = () => {
     e.preventDefault();
     setPage(1);
     setUsers([]);
-    fetchResults(1);
+    fetchUserData(1);
   };
 
-  const fetchResults = async (pageNumber) => {
+  const fetchUserData = async (pageNumber) => {
     if (!query.trim()) return;
 
     setLoading(true);
@@ -48,7 +48,7 @@ const Search = () => {
   const loadMore = () => {
     const nextPage = page + 1;
     setPage(nextPage);
-    fetchResults(nextPage);
+    fetchUserData(nextPage);
   };
 
   return (

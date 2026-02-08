@@ -6,8 +6,10 @@ function UserProfile() {
         mx-auto my-20
         rounded-lg
         shadow-lg
+        hover:shadow-xl
+        transition-shadow duration-300 ease-in-out
         text-center
-        sm:p-4 md:p-8
+        p-4 md:p-8
         max-w-xs md:max-w-sm
       "
     >
@@ -18,6 +20,8 @@ function UserProfile() {
           mx-auto
           rounded-full
           sm:w-24 sm:h-24 md:w-36 md:h-36
+          transition-transform duration-300 ease-in-out
+          hover:scale-110
         "
       />
 
@@ -27,6 +31,8 @@ function UserProfile() {
           text-blue-800
           text-lg md:text-xl
           font-semibold
+          transition-colors duration-300 ease-in-out
+          hover:text-blue-500
         "
       >
         John Doe
